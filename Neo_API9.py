@@ -1,27 +1,31 @@
 import time
 import json
-
-from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
 import os
-import pyautogui
 # =========Window=========================
 import tkinter as tk
 from tkinter import messagebox
-from PIL import Image, ImageTk
+# from PIL import Image, ImageTk
 # =========Excel=======================
 import openpyxl
-from openpyxl.styles import Font
-from openpyxl import load_workbook
-from openpyxl.utils import get_column_letter
+# from openpyxl.styles import Font
+# from openpyxl import load_workbook
+# from openpyxl.utils import get_column_letter
+
+
+
 # ===========Email=======================
 import win32com.client as win32
 # ===========API===============================
 import requests
-import pprint
+
+# from selenium import webdriver
+# from selenium.webdriver.support.wait import WebDriverWait
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.support import expected_conditions as EC
+#
+# import pyautogui
+# import pprint
 
 Current_Status_code = 0
 
