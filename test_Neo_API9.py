@@ -774,7 +774,7 @@ def A8test():
     token_url = Login_url
     user_token = A1_login_token(token_url, user_ID, user_PW)["token"]
     API_Name = "A8_addUser"
-    #==============測試資料建議採用讀檔方式===========================================
+    #==============測試資料建議採用讀檔方式=============================================
     # account = "alan.huang@ecloudvalley.com"
     account = "test9912399 @ abc.com"
     role_id = 2
