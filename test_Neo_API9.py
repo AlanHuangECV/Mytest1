@@ -775,7 +775,8 @@ def A8test():
     user_token = A1_login_token(token_url, user_ID, user_PW)["token"]
     API_Name = "A8_addUser"
     #==============測試資料建議採用讀檔方式===========================================
-    account = "alan.huang@ecloudvalley.com"
+    # account = "alan.huang@ecloudvalley.com"
+    account = "test9912399 @ abc.com"
     role_id = 2
     project_id_list = [1,2]
     try:
@@ -943,7 +944,7 @@ def A12test():
     user_token = A1_login_token(token_url, user_ID, user_PW)["token"]
     API_Name = "A12_deleteUser"
     A8_url = Com_url + "/api/v1/user/add_user"
-    account = "test9999912@abc.com"
+    account = "test9912399@abc.com"
     role_id = 2
     project_id_list = [1, 2]
     ret_addUser = A8_addUser(A8_url, user_token, account, role_id, project_id_list)
