@@ -424,7 +424,7 @@ def load_test_case(TestCaseFILE):
     return json_file_dic
 
 
-def test_A1test():
+def A1test():
     TestCaseFILE = "TestCase_API_A1.json"
     json_file_dic = load_test_case(TestCaseFILE)
     Func_url = "/api/v1/user/log_in"
@@ -527,7 +527,7 @@ def test_A1test():
         return Test_Result
 
 
-def test_A4test():
+def A4test():
 
     Func_url = "/api/v1/user/refresh_token"
     url = Com_url + Func_url
@@ -591,7 +591,7 @@ def test_A4test():
 
 
 
-def test_A5test():
+def A5test():
 
     # TestCaseFILE = "TestCase_API_A1.json"
     # json_file_dic = load_test_case(TestCaseFILE)
@@ -649,7 +649,7 @@ def test_A5test():
         print(f"{Current_Status_code},{Test_Id},{Test_Result}")
         return Test_Result
 
-def test_A6test():
+def A6test():
     global First_user_id
     Func_url = "/api/v1/user/list_user"
     url = Com_url + Func_url
@@ -710,7 +710,7 @@ def test_A6test():
         return Test_Result
 
 
-def test_A7test():
+def A7test():
 
     Func_url = "/api/v1/user/get_user/"
     url = Com_url + Func_url
@@ -776,7 +776,7 @@ def test_A7test():
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
         return Test_Result
 
-def test_A8test():
+def A8test():
 
     Func_url = "/api/v1/user/add_user"
     url = Com_url + Func_url
@@ -835,7 +835,7 @@ def test_A8test():
         return Test_Result
 
 #============A9test不適合自動化測試,且須跟A8一起測========================================================================
-def test_A9test():
+def A9test():
 
     Func_url = "/api/v1/user/activate_user"
     Activate_token = "eyJhbGciOiAiUlMyNTYiLCAidHlwIjogIkpXVCJ9.eyJlbWFpbCI6ICJhbGFuLmh1YW5nQGVjbG91ZHZhbGxleS5jb20iLCAiaG9zdG5hbWUiOiAiZWN2X3FhX3NwcmludDIuZWN2b3QuY29tIiwgImV4cCI6IDE2OTc3Njk0NjIuNDA5NX0.EYU78M6RttxTry_SM8y8k-k1eCViy7CG8WCT8UPlq4aXWWuPsK5govJ1W4rlkbvyddLAhjT8LRkNue51yssGBsPrcLs6PzD5HJBO0HAWeDv2Y01D_Jjcia_vDvphCFipPkswTL8tw08vAjtQ3W8rLS1EPvIfByDq2_FMj25c3B6yVW2mnWrRjPMsvTk9c_rkmzx4ivKYkrkUBsRy5FTKIRAK0_DdJEWfK9TCgIAg2CbJAfg4tJjZ-gxE2Oe0XR-Bj6gVfWM_3DbXAWdLRDWq3VLm8m8UDdLbgl-57r0bck7TXDDpxylKQQi5qj94mGX7vI0_UdEDhyiMt-yN0Gy1_Q"
@@ -888,7 +888,7 @@ def test_A9test():
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
         return Test_Result
-def test_A11test():
+def A11test():
 
     Func_url = "/api/v1/user/edit_user/"
     url = Com_url + Func_url
@@ -948,7 +948,7 @@ def test_A11test():
         return Test_Result
 
 #=================注意:A12test為危險測試必須搭配A8_addUser服用==========================================================================
-def test_A12test():
+def A12test():
 
     Func_url = "/api/v1/user/delete_user/"
     url = Com_url + Func_url
@@ -1241,13 +1241,13 @@ user_ID = json_file_dic["Login"]["ID"]
 user_PW = json_file_dic["Login"]["password"]
 
 
-assert test_A1test() == "Pass"
-assert test_A4test() == "Pass"
-assert test_A5test() == "Pass"
-assert test_A6test() == "Pass" # A7要跟A6一起測
-assert test_A7test() == "Pass" # A7要跟A6一起測
+assert A1test() == "Pass"
+assert A4test() == "Pass"
+assert A5test() == "Pass"
+assert A6test() == "Pass" # A7要跟A6一起測
+assert A7test() == "Pass" # A7要跟A6一起測
 # assert test_A8test()
-assert test_A11test() == "Pass"
+assert A11test() == "Pass"
 # assert test_A12test()
 
 # assert A1test() == "Pass"
