@@ -1121,6 +1121,17 @@ def ExeTest():
         A11test()
         All_times -=1
 
+def test_final():
+    assert A1test() == "Pass"
+    assert A4test() == "Pass"
+    assert A5test() == "Pass"
+    assert A6test() == "Pass"  # A7要跟A6一起測
+    assert A7test() == "Pass"  # A7要跟A6一起測
+    # assert test_A8test()
+    assert A11test() == "Pass"
+    # assert test_A12test()
+
+
 #==============API begin================================================================
 # url = "http://127.0.0.1:5000/A1_login/"
 # user_token = A1_login_token(url,"ABC","123")
@@ -1240,15 +1251,17 @@ else:
 user_ID = json_file_dic["Login"]["ID"]
 user_PW = json_file_dic["Login"]["password"]
 
-
-assert A1test() == "Pass"
-assert A4test() == "Pass"
-assert A5test() == "Pass"
-assert A6test() == "Pass" # A7要跟A6一起測
-assert A7test() == "Pass" # A7要跟A6一起測
-# assert test_A8test()
-assert A11test() == "Pass"
-# assert test_A12test()
+#=============只測這個===============================================
+test_final()
+#==============================================================
+# assert A1test() == "Pass"
+# assert A4test() == "Pass"
+# assert A5test() == "Pass"
+# assert A6test() == "Pass" # A7要跟A6一起測
+# assert A7test() == "Pass" # A7要跟A6一起測
+# # assert test_A8test()
+# assert A11test() == "Pass"
+# # assert test_A12test()
 
 # assert A1test() == "Pass"
 # assert A4test() == "Pass"
