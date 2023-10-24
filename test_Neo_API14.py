@@ -1273,7 +1273,8 @@ else:
 user_ID = json_file_dic["Login"]["ID"]
 user_PW = json_file_dic["Login"]["password"]
 
-
+#=============只測這個===============================================
+# test_final()
 assert test_A1test() == None
 assert test_A4test() == None
 assert test_A5test() == None
@@ -1282,7 +1283,8 @@ assert test_A7test() == None # A7要跟A6一起測
 # assert test_A8test() == "Pass"
 assert test_A11test() == None
 # assert test_A12test() == "Pass"
-
+os.system("allure generate allure_report/ -o report/html --clean")
+#==============================================================
 
 # ===================完成讀取參數===================================================
 # ===================#開始生成待測網址視窗 begin=======================================
