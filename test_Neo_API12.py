@@ -20,6 +20,7 @@ import requests
 
 # ==========pytest===========================
 import pytest
+import allure
 
 # from selenium import webdriver
 # from selenium.webdriver.support.wait import WebDriverWait
@@ -524,7 +525,10 @@ def test_A1test():
         # show_test_result(Test_Result, "A1_user_login")  # 視窗顯示測試結果
         # print(Current_Status_code)
         print(f"{Current_Status_code},{Test_Id},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
 
 
 def test_A4test():
@@ -587,7 +591,10 @@ def test_A4test():
         # show_test_result(Test_Result, "A4_Re_token")
         # print(Current_Status_code)
         print(f"{Current_Status_code},{Test_Id},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
 
 
 
@@ -647,7 +654,11 @@ def test_A5test():
         # show_test_result(Test_Result, "A5_user_logout")
         # print(Current_Status_code)
         print(f"{Current_Status_code},{Test_Id},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
+
 
 def test_A6test():
     global First_user_id
@@ -707,7 +718,10 @@ def test_A6test():
         # show_test_result(Test_Result, API_Name)
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
 
 
 def test_A7test():
@@ -774,7 +788,11 @@ def test_A7test():
         # show_test_result(Test_Result, API_Name)
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
+
 
 def test_A8test():
 
@@ -832,7 +850,11 @@ def test_A8test():
         # show_test_result(Test_Result, API_Name)
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
+
 
 #============A9test不適合自動化測試,且須跟A8一起測========================================================================
 def test_A9test():
@@ -887,7 +909,11 @@ def test_A9test():
         # show_test_result(Test_Result, API_Name)
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
+
 def test_A11test():
 
     Func_url = "/api/v1/user/edit_user/"
@@ -945,7 +971,10 @@ def test_A11test():
         # show_test_result(Test_Result, API_Name)
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
-        return Test_Result
+        if Test_Result == "Fail":
+            return Test_Result
+        else:
+            return None
 
 #=================注意:A12test為危險測試必須搭配A8_addUser服用==========================================================================
 def test_A12test():
@@ -1022,7 +1051,10 @@ def test_A12test():
         # show_test_result(Test_Result, API_Name)
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
-        return Test_Result
+        if Test_Result =="Fail":
+            return Test_Result
+        else:
+            return None
 
 
 
@@ -1152,7 +1184,8 @@ Input_password = ""
 
 # =============設定allure==============================================
 if __name__ == '__main__':
-    pytest.main([r'--alluredir=test_report\allure'])
+    pytest.main([r'--alluredir=allure-report'])
+    # pytest.main([r'--alluredir=test_report\allure'])
     # pytest.main(["-s", "-v", "--html=Outputs/reports/pytest.html", "--alluredir=Outputs/allure"])   # allure文件生成的目錄
 
 
@@ -1334,6 +1367,9 @@ cclist = "alan.huang@ecloudvalley.com"
 
 # retValue = os.system(file_name) # 開啟Excel檔測試結果
 TestResultFile = os.popen(file_name) # 開啟Excel檔測試結果 ===========vvvvvvvvvv
+
+# allure serve 【放置測試結果的路徑】
+
 # exit()
 
 
