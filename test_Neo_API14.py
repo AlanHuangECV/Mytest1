@@ -1184,7 +1184,8 @@ Input_password = ""
 
 # =============設定allure==============================================
 # if __name__ == '__main__':
-pytest.main([r'--alluredir=allure-report'])
+pytest.main([r'--alluredir=allure_test_result'])
+# pytest.main([r'--alluredir=allure-report'])
     # pytest.main([r'--alluredir=test_report\allure'])
     # pytest.main(["-s", "-v", "--html=Outputs/reports/pytest.html", "--alluredir=Outputs/allure"])   # allure文件生成的目錄
 
