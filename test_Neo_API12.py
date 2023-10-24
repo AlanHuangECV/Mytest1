@@ -1241,23 +1241,16 @@ user_ID = json_file_dic["Login"]["ID"]
 user_PW = json_file_dic["Login"]["password"]
 
 
-test_A1test()
-test_A4test()
-test_A5test()
-test_A6test() # A7要跟A6一起測
-test_A7test() # A7要跟A6一起測
-# test_A8test()
-test_A11test()
-# test_A12test()
+assert test_A1test() == "Pass"
+assert test_A4test() == "Pass"
+assert test_A5test() == "Pass"
+assert test_A6test() == "Pass" # A7要跟A6一起測
+assert test_A7test() == "Pass" # A7要跟A6一起測
+# assert test_A8test() == "Pass"
+assert test_A11test() == "Pass"
+# assert test_A12test() == "Pass"
 
-# assert A1test() == "Pass"
-# assert A4test() == "Pass"
-# assert A5test() == "Pass"
-# assert A6test() == "Pass"  # A7要跟A6一起測
-# assert A7test() == "Pass"  # A7要跟A6一起測
-# # assert A8test() == "Pass"
-# assert A11test() == "Pass"
-# # assert A12test() == "Pass"
+
 # ===================完成讀取參數===================================================
 # ===================#開始生成待測網址視窗 begin=======================================
 # browser = webdriver.Chrome()
