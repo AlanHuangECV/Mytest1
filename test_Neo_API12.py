@@ -424,7 +424,7 @@ def load_test_case(TestCaseFILE):
     return json_file_dic
 
 
-def A1test():
+def test_A1test():
     TestCaseFILE = "TestCase_API_A1.json"
     json_file_dic = load_test_case(TestCaseFILE)
     Func_url = "/api/v1/user/log_in"
@@ -527,7 +527,7 @@ def A1test():
         return Test_Result
 
 
-def A4test():
+def test_A4test():
 
     Func_url = "/api/v1/user/refresh_token"
     url = Com_url + Func_url
@@ -591,7 +591,7 @@ def A4test():
 
 
 
-def A5test():
+def test_A5test():
 
     # TestCaseFILE = "TestCase_API_A1.json"
     # json_file_dic = load_test_case(TestCaseFILE)
@@ -649,7 +649,7 @@ def A5test():
         print(f"{Current_Status_code},{Test_Id},{Test_Result}")
         return Test_Result
 
-def A6test():
+def test_A6test():
     global First_user_id
     Func_url = "/api/v1/user/list_user"
     url = Com_url + Func_url
@@ -710,7 +710,7 @@ def A6test():
         return Test_Result
 
 
-def A7test():
+def test_A7test():
 
     Func_url = "/api/v1/user/get_user/"
     url = Com_url + Func_url
@@ -776,7 +776,7 @@ def A7test():
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
         return Test_Result
 
-def A8test():
+def test_A8test():
 
     Func_url = "/api/v1/user/add_user"
     url = Com_url + Func_url
@@ -835,7 +835,7 @@ def A8test():
         return Test_Result
 
 #============A9test不適合自動化測試,且須跟A8一起測========================================================================
-def A9test():
+def test_A9test():
 
     Func_url = "/api/v1/user/activate_user"
     Activate_token = "eyJhbGciOiAiUlMyNTYiLCAidHlwIjogIkpXVCJ9.eyJlbWFpbCI6ICJhbGFuLmh1YW5nQGVjbG91ZHZhbGxleS5jb20iLCAiaG9zdG5hbWUiOiAiZWN2X3FhX3NwcmludDIuZWN2b3QuY29tIiwgImV4cCI6IDE2OTc3Njk0NjIuNDA5NX0.EYU78M6RttxTry_SM8y8k-k1eCViy7CG8WCT8UPlq4aXWWuPsK5govJ1W4rlkbvyddLAhjT8LRkNue51yssGBsPrcLs6PzD5HJBO0HAWeDv2Y01D_Jjcia_vDvphCFipPkswTL8tw08vAjtQ3W8rLS1EPvIfByDq2_FMj25c3B6yVW2mnWrRjPMsvTk9c_rkmzx4ivKYkrkUBsRy5FTKIRAK0_DdJEWfK9TCgIAg2CbJAfg4tJjZ-gxE2Oe0XR-Bj6gVfWM_3DbXAWdLRDWq3VLm8m8UDdLbgl-57r0bck7TXDDpxylKQQi5qj94mGX7vI0_UdEDhyiMt-yN0Gy1_Q"
@@ -888,7 +888,7 @@ def A9test():
         # print(Current_Status_code)
         print(f"{Current_Status_code},{API_Name},{Test_Result}")
         return Test_Result
-def A11test():
+def test_A11test():
 
     Func_url = "/api/v1/user/edit_user/"
     url = Com_url + Func_url
@@ -948,7 +948,7 @@ def A11test():
         return Test_Result
 
 #=================注意:A12test為危險測試必須搭配A8_addUser服用==========================================================================
-def A12test():
+def test_A12test():
 
     Func_url = "/api/v1/user/delete_user/"
     url = Com_url + Func_url
@@ -1097,28 +1097,28 @@ def ExeTest():
 
     while fast_times > 0:
 
-        A1test()
-        A4test()  # A4測試
-        A5test()  # A5測試
-        A6test()  # A7要跟A6一起測
-        A7test()  # A7要跟A6一起測
-        A8test()
-        A11test()
+        test_A1test()
+        test_A4test()  # A4測試
+        test_A5test()  # A5測試
+        test_A6test()  # A7要跟A6一起測
+        test_A7test()  # A7要跟A6一起測
+        test_A8test()
+        test_A11test()
         fast_times -=1
 
     while integrated_times > 0:
-        A12test()
+        test_A12test()
         integrated_times -=1
 
     while All_times > 0:
 
-        A1test()  # A1測試
-        A4test()  # A4測試
-        A5test()  # A5測試
-        A6test()  # A7要跟A6一起測
-        A7test()  # A7要跟A6一起測
-        A8test()
-        A11test()
+        test_A1test()  # A1測試
+        test_A4test()  # A4測試
+        test_A5test()  # A5測試
+        test_A6test()  # A7要跟A6一起測
+        test_A7test()  # A7要跟A6一起測
+        test_A8test()
+        test_A11test()
         All_times -=1
 
 #==============API begin================================================================
@@ -1241,14 +1241,14 @@ user_ID = json_file_dic["Login"]["ID"]
 user_PW = json_file_dic["Login"]["password"]
 
 
-A1test()
-A4test()
-A5test()
-A6test() # A7要跟A6一起測
-A7test() # A7要跟A6一起測
-# A8test()
-A11test()
-# A12test()
+test_A1test()
+test_A4test()
+test_A5test()
+test_A6test() # A7要跟A6一起測
+test_A7test() # A7要跟A6一起測
+# test_A8test()
+test_A11test()
+# test_A12test()
 
 # assert A1test() == "Pass"
 # assert A4test() == "Pass"
