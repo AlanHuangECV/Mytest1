@@ -1056,7 +1056,14 @@ def test_A12test():
         else:
             return None
 
-
+def test_final():
+     test_A1test()
+     test_A4test()
+     test_A5test()
+     test_A6test()  # A7要跟A6一起測
+     test_A7test() # A7要跟A6一起測
+    # assert test_A8test() == "Pass"
+     test_A11test()
 
 
 
@@ -1184,7 +1191,7 @@ Input_password = ""
 
 # =============設定allure==============================================
 # if __name__ == '__main__':
-pytest.main([r'--alluredir=allure_test_result'])
+pytest.main([r'--alluredir=allure_test_result']) # 這個要跟Jenkins的Path一樣
 # pytest.main([r'--alluredir=allure-report'])
     # pytest.main([r'--alluredir=test_report\allure'])
     # pytest.main(["-s", "-v", "--html=Outputs/reports/pytest.html", "--alluredir=Outputs/allure"])   # allure文件生成的目錄
@@ -1275,7 +1282,7 @@ user_ID = json_file_dic["Login"]["ID"]
 user_PW = json_file_dic["Login"]["password"]
 
 #=============只測這個===============================================
-# test_final()
+test_final()
 assert test_A1test() == None
 assert test_A4test() == None
 assert test_A5test() == None
