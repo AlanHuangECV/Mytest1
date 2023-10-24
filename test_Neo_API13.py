@@ -20,6 +20,7 @@ import requests
 
 # ==========pytest===========================
 import pytest
+# import allure
 
 # from selenium import webdriver
 # from selenium.webdriver.support.wait import WebDriverWait
@@ -381,31 +382,31 @@ def get_color(result):
 
     return color
 
-def show_test_result(Test_Result,Test_Id):
-    window = tk.Tk()  # 創造一個視窗
-    window.title("Test Result")  # 視窗標題
-    window.geometry("900x160")  # 設定視窗初始大小
-    set_window_center(window,900, 160)  # 將視窗放在中央
-    # window.maxsize(width="1024", height="768") # 設定視窗最大的大小
-    window.resizable(False, False)  # 設定視窗大小能不能被改變
-    window.config(padx=10, pady=10)  # 調位置,不要擠在左上角
-    color = get_color(Test_Result)
-    show_result = tk.Label(text=f"{Test_Id}:{Test_Result}", font=("標楷體", 50), width=24, fg=color)  # 設定lable文字
-    show_result.pack()
-    window.update()
-    time.sleep(1)
-    window.destroy()
-
-
-def set_window_center(window,win_width, win_height): # 傳入視窗大小,將視窗設在螢幕中央
-    # 获取屏幕 宽、高
-    screen_width = window.winfo_screenwidth()
-    screen_height = window.winfo_screenheight()
-    # 計算 x, y 位置
-    x = int(round((screen_width/2) - (win_width/2),0))
-    y = int(round((screen_height/2) - (win_height/2),0))
-    # window.geometry('%dx%d+%d+%d' % (win_width, win_height, x, y))
-    window.geometry(f"{win_width}x{win_height}+{x}+{y}")
+# def show_test_result(Test_Result,Test_Id):
+#     window = tk.Tk()  # 創造一個視窗
+#     window.title("Test Result")  # 視窗標題
+#     window.geometry("900x160")  # 設定視窗初始大小
+#     set_window_center(window,900, 160)  # 將視窗放在中央
+#     # window.maxsize(width="1024", height="768") # 設定視窗最大的大小
+#     window.resizable(False, False)  # 設定視窗大小能不能被改變
+#     window.config(padx=10, pady=10)  # 調位置,不要擠在左上角
+#     color = get_color(Test_Result)
+#     show_result = tk.Label(text=f"{Test_Id}:{Test_Result}", font=("標楷體", 50), width=24, fg=color)  # 設定lable文字
+#     show_result.pack()
+#     window.update()
+#     time.sleep(1)
+#     window.destroy()
+#
+#
+# def set_window_center(window,win_width, win_height): # 傳入視窗大小,將視窗設在螢幕中央
+#     # 获取屏幕 宽、高
+#     screen_width = window.winfo_screenwidth()
+#     screen_height = window.winfo_screenheight()
+#     # 計算 x, y 位置
+#     x = int(round((screen_width/2) - (win_width/2),0))
+#     y = int(round((screen_height/2) - (win_height/2),0))
+#     # window.geometry('%dx%d+%d+%d' % (win_width, win_height, x, y))
+#     window.geometry(f"{win_width}x{win_height}+{x}+{y}")
 
 
 def load_test_case(TestCaseFILE):
@@ -1253,6 +1254,7 @@ user_PW = json_file_dic["Login"]["password"]
 
 #=============只測這個===============================================
 test_final()
+os.system("allure generate allure_report/ -o report/html --clean")
 #==============================================================
 # assert A1test() == "Pass"
 # assert A4test() == "Pass"
