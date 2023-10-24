@@ -1341,6 +1341,6 @@ cclist = "alan.huang@ecloudvalley.com"
 
 # retValue = os.system(file_name) # 開啟Excel檔測試結果
 TestResultFile = os.popen(file_name) # 開啟Excel檔測試結果 ===========vvvvvvvvvv
-exit()
+# exit()
 
 
