@@ -1,0 +1,31 @@
+
+
+version: 0.2
+
+phases:
+  install:
+    runtime-version:
+      python: 3
+    commands:
+      - echo "install runtime python 3.x"
+      #- pip install requirement.txt
+  pre_build:
+    commands:
+      - echo "pre_build"
+  build:
+    commands:
+      - echo "start_build 'date'"
+      - python --version
+      #- python test_Neo_API15.py
+      #- printenv
+  post_build:
+    commands:
+      - echo "build_finished 'date'"
+artifacts:
+  files:
+    #- '**/*'
+    - 'test_Neo_API15.py'
+  name: my-codebuild-release
+
+
+      

@@ -1,0 +1,70 @@
+{
+  "F02-001-01": {
+    "ID": "a12345677@",
+    "password": "Tw123@abc"
+  },
+  "F02-001-02": {
+    "ID": "ala99999",
+    "password": "Tw123@abc"
+  },
+  "F02-001-03": {
+    "ID": "alan.huang.hgstgmail.com",
+    "password": "Tw123@abc"
+  },
+  "F02-001-04": {
+    "ID": "alan.huang.hgst@gmail",
+    "password": "Tw123@abc"
+  },
+  "F02-001-05": {
+    "ID": "alan.huang.hgst000@gmail.com",
+    "password": "Tw123"
+  },
+  "F02-001-06": {
+    "ID": "alan.huang.hgst000@gmail.com",
+    "password": "Tw@#"
+  },
+  "F02-001-07": {
+    "ID": "alan.huang.hgst000@gmail.com",
+    "password": "AAAA@#AAAAA"
+  },
+  "F02-001-08": {
+    "ID": "alan.huang.hgst000@gmail.com",
+    "password": "AaBBcccc&^ccc"
+  },
+  "F02-001-09": {
+    "ID": "alan.huang.hgst000@gmail.com",
+    "password": "AaFFb123"
+  },
+  "F02-001-10": {
+    "ID": "alan.huang.hgst000@gmail.com",
+    "password": "AaFFb%%123"
+  },
+  "F02-001-11": {
+    "ID": "ala999999@gmail.com or 1=1",
+    "password": "Tw123@abc"
+  },
+  "F02-001-12": {
+    "ID": "alan.huang.hgst@gmail.com or 1=1 ",
+    "password": "Tw123@abc"
+  },
+  "F02-001-13": {
+    "ID": "alan.huang.hgst@gmail.com or 1=1 or",
+    "password": "Tw123@abc"
+  },
+  "F02-001-14": {
+    "ID": "alan.huang.hgst@gmail.com or 1=1 or ",
+    "password": "Tw123@abc"
+  },
+  "F02-001-15": {
+    "ID": "alan.huang.hgst00@gmail.com",
+    "password": "Aacb##123 or 1=1"
+  },
+  "F02-001-16": {
+    "ID": "alan.huang.hgst00@gmail.com",
+    "password": "AaFFb%%123 or 1=1 or "
+  },
+  "F02-001-17": {
+    "ID": "alan.huang.hgst00@gmail.com",
+    "password": "AaFFb%%123 or 1=1 or"
+  }
+}

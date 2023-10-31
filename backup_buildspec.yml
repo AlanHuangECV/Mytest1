@@ -1,0 +1,22 @@
+
+
+version: 0.2
+
+phases:
+  install:
+    runtime-version:
+      python: 3
+    commands:
+      - echo "install runtime python 3.x"
+  pre_build:
+    commands:
+      - echo "pre_build"
+  build:
+    commands:
+      - echo "start_build 'date'"
+      - python --version
+  post_build:
+    commands:
+      - echo "build_finished 'date'"
+
+      
